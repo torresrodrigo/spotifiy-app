@@ -13,6 +13,8 @@
 		8878DBBF27B0B2A300676D03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8878DBBD27B0B2A300676D03 /* Main.storyboard */; };
 		8878DBC127B0B2A700676D03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8878DBC027B0B2A700676D03 /* Assets.xcassets */; };
 		8878DBC427B0B2A700676D03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8878DBC227B0B2A700676D03 /* LaunchScreen.storyboard */; };
+		8878DBCE27B0B4FF00676D03 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8878DBCC27B0B4FF00676D03 /* MainView.swift */; };
+		8878DBCF27B0B4FF00676D03 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8878DBCD27B0B4FF00676D03 /* MainView.xib */; };
 		E8EAF50FD34F3802971218F4 /* Pods_spotifiy_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB093CBAD6883955A2DD01B3 /* Pods_spotifiy_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		8878DBC027B0B2A700676D03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8878DBC327B0B2A700676D03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8878DBC527B0B2A700676D03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8878DBCC27B0B4FF00676D03 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		8878DBCD27B0B4FF00676D03 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 		EB093CBAD6883955A2DD01B3 /* Pods_spotifiy_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_spotifiy_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -56,7 +60,6 @@
 				1E45BBAA2A03D39D2AE6EE5F /* Pods-spotifiy-app.debug.xcconfig */,
 				389AFAC6A8637181312F95EB /* Pods-spotifiy-app.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,6 +84,7 @@
 		8878DBB627B0B2A300676D03 /* spotifiy-app */ = {
 			isa = PBXGroup;
 			children = (
+				8878DBCB27B0B4D000676D03 /* Use Cases */,
 				8878DBB727B0B2A300676D03 /* AppDelegate.swift */,
 				8878DBB927B0B2A300676D03 /* SceneDelegate.swift */,
 				8878DBBB27B0B2A300676D03 /* ViewController.swift */,
@@ -90,6 +94,39 @@
 				8878DBC527B0B2A700676D03 /* Info.plist */,
 			);
 			path = "spotifiy-app";
+			sourceTree = "<group>";
+		};
+		8878DBCB27B0B4D000676D03 /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				8878DBD027B0B50500676D03 /* Main */,
+			);
+			path = "Use Cases";
+			sourceTree = "<group>";
+		};
+		8878DBD027B0B50500676D03 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8878DBD127B0B51000676D03 /* Controllers */,
+				8878DBD227B0B51B00676D03 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8878DBD127B0B51000676D03 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8878DBCC27B0B4FF00676D03 /* MainView.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8878DBD227B0B51B00676D03 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8878DBCD27B0B4FF00676D03 /* MainView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8878DBC427B0B2A700676D03 /* LaunchScreen.storyboard in Resources */,
+				8878DBCF27B0B4FF00676D03 /* MainView.xib in Resources */,
 				8878DBC127B0B2A700676D03 /* Assets.xcassets in Resources */,
 				8878DBBF27B0B2A300676D03 /* Main.storyboard in Resources */,
 			);
@@ -208,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8878DBBC27B0B2A300676D03 /* ViewController.swift in Sources */,
+				8878DBCE27B0B4FF00676D03 /* MainView.swift in Sources */,
 				8878DBB827B0B2A300676D03 /* AppDelegate.swift in Sources */,
 				8878DBBA27B0B2A300676D03 /* SceneDelegate.swift in Sources */,
 			);
