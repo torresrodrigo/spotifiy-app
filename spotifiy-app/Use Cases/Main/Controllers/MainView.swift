@@ -9,21 +9,34 @@ import UIKit
 
 class MainView: UIViewController {
 
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var artistTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
 
-        // Do any additional setup after loading the view.
     }
 
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+
+extension MainView: UITableViewDelegate, UITableViewDataSource {
+    
+    private func setupTableView() {
+        artistTableView.register(ArtistCell.nib(), forCellReuseIdentifier: ArtistCell.identifier)
+        artistTableView.delegate = self
+        artistTableView.dataSource = self
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = artistTableView.dequeueReusableCell(withIdentifier: ArtistCell.identifier, for: indexPath) as! ArtistCell
+        return cell
+    }
+    
+    
 }

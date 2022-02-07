@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88788BC727B0B8390022F59C /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88788BC527B0B8390022F59C /* ArtistCell.swift */; };
+		88788BC827B0B8390022F59C /* ArtistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88788BC627B0B8390022F59C /* ArtistCell.xib */; };
 		8878DBB827B0B2A300676D03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8878DBB727B0B2A300676D03 /* AppDelegate.swift */; };
 		8878DBBA27B0B2A300676D03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8878DBB927B0B2A300676D03 /* SceneDelegate.swift */; };
 		8878DBBC27B0B2A300676D03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8878DBBB27B0B2A300676D03 /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		1E45BBAA2A03D39D2AE6EE5F /* Pods-spotifiy-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spotifiy-app.debug.xcconfig"; path = "Target Support Files/Pods-spotifiy-app/Pods-spotifiy-app.debug.xcconfig"; sourceTree = "<group>"; };
 		389AFAC6A8637181312F95EB /* Pods-spotifiy-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spotifiy-app.release.xcconfig"; path = "Target Support Files/Pods-spotifiy-app/Pods-spotifiy-app.release.xcconfig"; sourceTree = "<group>"; };
+		88788BC527B0B8390022F59C /* ArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
+		88788BC627B0B8390022F59C /* ArtistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistCell.xib; sourceTree = "<group>"; };
 		8878DBB427B0B2A300676D03 /* spotifiy-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "spotifiy-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8878DBB727B0B2A300676D03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8878DBB927B0B2A300676D03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,15 @@
 				389AFAC6A8637181312F95EB /* Pods-spotifiy-app.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		88788BC427B0B81A0022F59C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				88788BC527B0B8390022F59C /* ArtistCell.swift */,
+				88788BC627B0B8390022F59C /* ArtistCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		8878DBAB27B0B2A300676D03 = {
@@ -124,6 +137,7 @@
 		8878DBD227B0B51B00676D03 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				88788BC427B0B81A0022F59C /* Cell */,
 				8878DBCD27B0B4FF00676D03 /* MainView.xib */,
 			);
 			path = View;
@@ -189,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88788BC827B0B8390022F59C /* ArtistCell.xib in Resources */,
 				8878DBC427B0B2A700676D03 /* LaunchScreen.storyboard in Resources */,
 				8878DBCF27B0B4FF00676D03 /* MainView.xib in Resources */,
 				8878DBC127B0B2A700676D03 /* Assets.xcassets in Resources */,
@@ -248,6 +263,7 @@
 				8878DBBC27B0B2A300676D03 /* ViewController.swift in Sources */,
 				8878DBCE27B0B4FF00676D03 /* MainView.swift in Sources */,
 				8878DBB827B0B2A300676D03 /* AppDelegate.swift in Sources */,
+				88788BC727B0B8390022F59C /* ArtistCell.swift in Sources */,
 				8878DBBA27B0B2A300676D03 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
