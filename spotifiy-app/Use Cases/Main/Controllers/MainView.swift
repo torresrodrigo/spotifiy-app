@@ -29,6 +29,7 @@ extension MainView: UITableViewDelegate, UITableViewDataSource {
         artistTableView.register(ArtistCell.nib(), forCellReuseIdentifier: ArtistCell.identifier)
         artistTableView.delegate = self
         artistTableView.dataSource = self
+        artistTableView.isHidden = true
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
