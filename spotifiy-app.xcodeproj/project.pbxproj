@@ -13,9 +13,12 @@
 		8878DBBF27B0B2A300676D03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8878DBBD27B0B2A300676D03 /* Main.storyboard */; };
 		8878DBC127B0B2A700676D03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8878DBC027B0B2A700676D03 /* Assets.xcassets */; };
 		8878DBC427B0B2A700676D03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8878DBC227B0B2A700676D03 /* LaunchScreen.storyboard */; };
+		E8EAF50FD34F3802971218F4 /* Pods_spotifiy_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB093CBAD6883955A2DD01B3 /* Pods_spotifiy_app.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E45BBAA2A03D39D2AE6EE5F /* Pods-spotifiy-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spotifiy-app.debug.xcconfig"; path = "Target Support Files/Pods-spotifiy-app/Pods-spotifiy-app.debug.xcconfig"; sourceTree = "<group>"; };
+		389AFAC6A8637181312F95EB /* Pods-spotifiy-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spotifiy-app.release.xcconfig"; path = "Target Support Files/Pods-spotifiy-app/Pods-spotifiy-app.release.xcconfig"; sourceTree = "<group>"; };
 		8878DBB427B0B2A300676D03 /* spotifiy-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "spotifiy-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8878DBB727B0B2A300676D03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8878DBB927B0B2A300676D03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		8878DBC027B0B2A700676D03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8878DBC327B0B2A700676D03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8878DBC527B0B2A700676D03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB093CBAD6883955A2DD01B3 /* Pods_spotifiy_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_spotifiy_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8EAF50FD34F3802971218F4 /* Pods_spotifiy_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C30229DBDC6D1F11EC1B8C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB093CBAD6883955A2DD01B3 /* Pods_spotifiy_app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		877AA9F3CE03FFBE95010DB9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E45BBAA2A03D39D2AE6EE5F /* Pods-spotifiy-app.debug.xcconfig */,
+				389AFAC6A8637181312F95EB /* Pods-spotifiy-app.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8878DBAB27B0B2A300676D03 = {
 			isa = PBXGroup;
 			children = (
 				8878DBB627B0B2A300676D03 /* spotifiy-app */,
 				8878DBB527B0B2A300676D03 /* Products */,
+				877AA9F3CE03FFBE95010DB9 /* Pods */,
+				1C30229DBDC6D1F11EC1B8C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8878DBC827B0B2A700676D03 /* Build configuration list for PBXNativeTarget "spotifiy-app" */;
 			buildPhases = (
+				56234C87570480CC3AE67E6E /* [CP] Check Pods Manifest.lock */,
 				8878DBB027B0B2A300676D03 /* Sources */,
 				8878DBB127B0B2A300676D03 /* Frameworks */,
 				8878DBB227B0B2A300676D03 /* Resources */,
+				D0A6A540D7E05620D0FF2B4F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		56234C87570480CC3AE67E6E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-spotifiy-app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0A6A540D7E05620D0FF2B4F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-spotifiy-app/Pods-spotifiy-app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-spotifiy-app/Pods-spotifiy-app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-spotifiy-app/Pods-spotifiy-app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8878DBB027B0B2A300676D03 /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		8878DBC927B0B2A700676D03 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E45BBAA2A03D39D2AE6EE5F /* Pods-spotifiy-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +382,7 @@
 		};
 		8878DBCA27B0B2A700676D03 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 389AFAC6A8637181312F95EB /* Pods-spotifiy-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
