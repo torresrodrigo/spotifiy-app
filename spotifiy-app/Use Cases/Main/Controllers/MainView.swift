@@ -9,15 +9,17 @@ import UIKit
 
 class MainView: UIViewController {
 
+    private var router = MainRouter()
+    private var viewModel = MainViewModel()
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var artistTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.bind(view: self, router: router)
         setupTableView()
 
     }
-
-
 
 }
 
