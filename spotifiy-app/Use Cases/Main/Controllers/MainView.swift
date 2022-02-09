@@ -24,7 +24,6 @@ class MainView: UIViewController {
         setupSearchBar()
     }
     
-    
     func setupSearchBar() {
         searchBar.searchTextField.addTarget(self, action: #selector(getArtist), for: .editingDidEndOnExit)
     }

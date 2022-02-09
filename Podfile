@@ -9,6 +9,8 @@ target 'spotifiy-app' do
     pod 'Alamofire', '~> 5.5'
     pod 'RxSwift', '6.5.0'
     pod 'RxCocoa', '6.5.0'
+    pod 'SDWebImage', '~> 5.0'
+	
 
 
 end
