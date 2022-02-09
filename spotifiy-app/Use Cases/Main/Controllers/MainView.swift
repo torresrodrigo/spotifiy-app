@@ -24,7 +24,6 @@ class MainView: UIViewController {
         setupSearchBar()
     }
     
-    
     func setupSearchBar() {
         searchBar.searchTextField.addTarget(self, action: #selector(getArtist), for: .editingDidEndOnExit)
     }
@@ -38,6 +37,8 @@ class MainView: UIViewController {
             .observe(on: MainScheduler.instance)
             .subscribe { artist in
                 self.artist = artist
+                self.artistTableView.reloadData()
+                self.artistTableView.isHidden = false
             } onError: { error in
                 print(error.localizedDescription)
             }.disposed(by: disposeBag)
@@ -54,14 +55,16 @@ extension MainView: UITableViewDelegate, UITableViewDataSource {
         artistTableView.delegate = self
         artistTableView.dataSource = self
         artistTableView.isHidden = true
+        artistTableView.rowHeight = 60
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return artist.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = artistTableView.dequeueReusableCell(withIdentifier: ArtistCell.identifier, for: indexPath) as! ArtistCell
+        cell.setupCell(data: artist[indexPath.row])
         return cell
     }
     

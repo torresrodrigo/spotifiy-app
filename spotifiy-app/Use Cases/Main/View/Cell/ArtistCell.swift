@@ -9,6 +9,8 @@ import UIKit
 
 class ArtistCell: UITableViewCell {
 
+    let imageHelper = ImageURL()
+    
     static let identifier = String(describing: ArtistCell.self)
     static func nib() -> UINib {
         return UINib(nibName: "ArtistCell", bundle: nil)
@@ -25,6 +27,14 @@ class ArtistCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setupCell(data: ArtistData) {
+        artistTitleLabel.text = data.name
+        if !data.images.isEmpty {
+            
+            imageHelper.getImage(imageUrl: data.images[0].url, imageView: artistImage)
+        }
     }
     
 }
