@@ -11,10 +11,10 @@ import Alamofire
 struct Constants {
     
     static let base_url = "https://api.spotify.com/v1/"
-    static let SEARCH_ENDPOINT = base_url+"/search?"
+    static let SEARCH_ENDPOINT = base_url+"search?"
     
     
-    static let bearerToken = "BQAtrW5GtfO6MrBBTVZ9C4DcyhevE1Tbts5pxaLz_JMUQ8detxJ3L1bn8PFJ3ESn04eCaUQzr8c598k8cX9vuR5KAQVMaB1D-oC4p964Dn_1q60TvFgKONPExBci-9PcD_xZUSvBEvxfL_7_95MpF2nJyQUBGY6Y71A"
+    static let bearerToken = "BQDoMPA31bHqpF38SPd24cLXeLEAMrkRxdsdAEj2aYPoX-JTjQUiJBAL3M8LoscmJC0hEJsWZDYeK5SI8geEzn0u_DjG9wu1bt_SGN3q9lFI232zRyDKcrPKTGj81SuZUlry5taOjyIkzpOCH2MQAX8E4nAtxe7BUu0"
     
     
     static let headers: HTTPHeaders = [

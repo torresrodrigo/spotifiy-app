@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import RxSwift
 
 class MainView: UIViewController {
 
     private var router = MainRouter()
     private var viewModel = MainViewModel()
+    private var disposeBag = DisposeBag()
+    var artist = [ArtistData]()
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var artistTableView: UITableView!
@@ -18,7 +21,22 @@ class MainView: UIViewController {
         super.viewDidLoad()
         viewModel.bind(view: self, router: router)
         setupTableView()
+        getArtist()
 
+    }
+    
+    func getArtist() {
+        let params = ["q" : "duki", "type" : "artist"]
+        
+        viewModel.getArtist(params: params)
+            .subscribe(on: MainScheduler.instance)
+            .observe(on: MainScheduler.instance)
+            .subscribe { artist in
+                self.artist = artist
+                print(artist)
+            } onError: { error in
+                print(error.localizedDescription)
+            }.disposed(by: disposeBag)
     }
 
 }

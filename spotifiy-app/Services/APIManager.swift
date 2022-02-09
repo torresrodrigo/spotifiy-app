@@ -13,7 +13,7 @@ class APIManager {
     
     static let shared = APIManager()
     
-    func getArtist(params: [String: String])  -> Observable<Artists> {
+    func getArtist(params: [String: String])  -> Observable<[ArtistData]> {
         let url = Constants.SEARCH_ENDPOINT
         let headers = Constants.headers
         
@@ -21,7 +21,7 @@ class APIManager {
             let requestReference = AF.request(url, method: .get, parameters: params, headers: headers).responseDecodable(of: DataResponse.self) { response in
                 switch response.result {
                 case .success(let data):
-                    observer.onNext(data.artists)
+                    observer.onNext(data.artists.items)
                 case .failure(let error):
                     observer.onError(error.underlyingError!)
                 }
