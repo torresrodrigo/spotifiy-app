@@ -21,25 +21,31 @@ class MainView: UIViewController {
         super.viewDidLoad()
         viewModel.bind(view: self, router: router)
         setupTableView()
-        getArtist()
-
+        setupSearchBar()
     }
     
-    func getArtist() {
-        let params = ["q" : "duki", "type" : "artist"]
+    
+    func setupSearchBar() {
+        searchBar.searchTextField.addTarget(self, action: #selector(getArtist), for: .editingDidEndOnExit)
+    }
+    
+    @objc func getArtist() {
+        guard let searchBarText = searchBar.text else { return }
+        let params = ["q" : searchBarText, "type" : "artist"]
         
         viewModel.getArtist(params: params)
             .subscribe(on: MainScheduler.instance)
             .observe(on: MainScheduler.instance)
             .subscribe { artist in
                 self.artist = artist
-                print(artist)
             } onError: { error in
                 print(error.localizedDescription)
             }.disposed(by: disposeBag)
     }
 
 }
+
+
 
 extension MainView: UITableViewDelegate, UITableViewDataSource {
     
