@@ -19,7 +19,7 @@
                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RT9-k8-HrT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MLi-8n-a81">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MLi-8n-a81">
                                 <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="MLi-8n-a81" secondAttribute="height" multiplier="1:1" id="hYF-HR-GuY"/>
