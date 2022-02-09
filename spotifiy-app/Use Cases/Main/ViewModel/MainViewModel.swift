@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import RxSwift
 
 class MainViewModel {
+    
     
     private weak var view: MainView?
     private var router: MainRouter?
@@ -17,4 +19,10 @@ class MainViewModel {
         self.router = router
         self.router?.setSourceView(view)
     }
+    
+    func getArtist(params: [String : String]) -> Observable<[ArtistData]> {
+        return APIManager.shared.getArtist(params: params)
+        
+    }
+    
 }

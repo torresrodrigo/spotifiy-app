@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		881C572327B326C300CAC6EF /* DataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C572227B326C300CAC6EF /* DataResponse.swift */; };
+		881C572527B32A3000CAC6EF /* Artists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C572427B32A3000CAC6EF /* Artists.swift */; };
+		881C572727B32D5F00CAC6EF /* ArtistData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C572627B32D5F00CAC6EF /* ArtistData.swift */; };
+		881C572D27B32FF100CAC6EF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C572C27B32FF100CAC6EF /* Constants.swift */; };
+		881C573027B353A500CAC6EF /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C572F27B353A500CAC6EF /* APIManager.swift */; };
 		88788BC727B0B8390022F59C /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88788BC527B0B8390022F59C /* ArtistCell.swift */; };
 		88788BC827B0B8390022F59C /* ArtistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88788BC627B0B8390022F59C /* ArtistCell.xib */; };
 		88788BCB27B0BDB30022F59C /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88788BCA27B0BDB30022F59C /* MainRouter.swift */; };
@@ -25,6 +30,11 @@
 /* Begin PBXFileReference section */
 		1E45BBAA2A03D39D2AE6EE5F /* Pods-spotifiy-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spotifiy-app.debug.xcconfig"; path = "Target Support Files/Pods-spotifiy-app/Pods-spotifiy-app.debug.xcconfig"; sourceTree = "<group>"; };
 		389AFAC6A8637181312F95EB /* Pods-spotifiy-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spotifiy-app.release.xcconfig"; path = "Target Support Files/Pods-spotifiy-app/Pods-spotifiy-app.release.xcconfig"; sourceTree = "<group>"; };
+		881C572227B326C300CAC6EF /* DataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponse.swift; sourceTree = "<group>"; };
+		881C572427B32A3000CAC6EF /* Artists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artists.swift; sourceTree = "<group>"; };
+		881C572627B32D5F00CAC6EF /* ArtistData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistData.swift; sourceTree = "<group>"; };
+		881C572C27B32FF100CAC6EF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		881C572F27B353A500CAC6EF /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		88788BC527B0B8390022F59C /* ArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
 		88788BC627B0B8390022F59C /* ArtistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistCell.xib; sourceTree = "<group>"; };
 		88788BCA27B0BDB30022F59C /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
@@ -69,6 +79,32 @@
 				389AFAC6A8637181312F95EB /* Pods-spotifiy-app.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		881C572127B326A300CAC6EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				881C572227B326C300CAC6EF /* DataResponse.swift */,
+				881C572427B32A3000CAC6EF /* Artists.swift */,
+				881C572627B32D5F00CAC6EF /* ArtistData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		881C572B27B32FE500CAC6EF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				881C572C27B32FF100CAC6EF /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		881C572E27B351B800CAC6EF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				881C572F27B353A500CAC6EF /* APIManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		88788BC427B0B81A0022F59C /* Cell */ = {
@@ -117,6 +153,8 @@
 		8878DBB627B0B2A300676D03 /* spotifiy-app */ = {
 			isa = PBXGroup;
 			children = (
+				881C572E27B351B800CAC6EF /* Services */,
+				881C572B27B32FE500CAC6EF /* Helpers */,
 				8878DBCB27B0B4D000676D03 /* Use Cases */,
 				8878DBB727B0B2A300676D03 /* AppDelegate.swift */,
 				8878DBB927B0B2A300676D03 /* SceneDelegate.swift */,
@@ -140,6 +178,7 @@
 		8878DBD027B0B50500676D03 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				881C572127B326A300CAC6EF /* Model */,
 				88788BCC27B0BE730022F59C /* ViewModel */,
 				88788BC927B0BDA20022F59C /* Router */,
 				8878DBD127B0B51000676D03 /* Controllers */,
@@ -282,12 +321,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				881C573027B353A500CAC6EF /* APIManager.swift in Sources */,
+				881C572727B32D5F00CAC6EF /* ArtistData.swift in Sources */,
+				881C572D27B32FF100CAC6EF /* Constants.swift in Sources */,
 				88788BCE27B0BE9C0022F59C /* MainViewModel.swift in Sources */,
 				8878DBBC27B0B2A300676D03 /* ViewController.swift in Sources */,
+				881C572527B32A3000CAC6EF /* Artists.swift in Sources */,
 				8878DBCE27B0B4FF00676D03 /* MainView.swift in Sources */,
 				8878DBB827B0B2A300676D03 /* AppDelegate.swift in Sources */,
 				88788BC727B0B8390022F59C /* ArtistCell.swift in Sources */,
 				8878DBBA27B0B2A300676D03 /* SceneDelegate.swift in Sources */,
+				881C572327B326C300CAC6EF /* DataResponse.swift in Sources */,
 				88788BCB27B0BDB30022F59C /* MainRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
