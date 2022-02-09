@@ -11,6 +11,7 @@
 		881C572527B32A3000CAC6EF /* Artists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C572427B32A3000CAC6EF /* Artists.swift */; };
 		881C572727B32D5F00CAC6EF /* ArtistData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C572627B32D5F00CAC6EF /* ArtistData.swift */; };
 		881C572D27B32FF100CAC6EF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C572C27B32FF100CAC6EF /* Constants.swift */; };
+		881C573027B353A500CAC6EF /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C572F27B353A500CAC6EF /* APIManager.swift */; };
 		88788BC727B0B8390022F59C /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88788BC527B0B8390022F59C /* ArtistCell.swift */; };
 		88788BC827B0B8390022F59C /* ArtistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88788BC627B0B8390022F59C /* ArtistCell.xib */; };
 		88788BCB27B0BDB30022F59C /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88788BCA27B0BDB30022F59C /* MainRouter.swift */; };
@@ -33,6 +34,7 @@
 		881C572427B32A3000CAC6EF /* Artists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artists.swift; sourceTree = "<group>"; };
 		881C572627B32D5F00CAC6EF /* ArtistData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistData.swift; sourceTree = "<group>"; };
 		881C572C27B32FF100CAC6EF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		881C572F27B353A500CAC6EF /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		88788BC527B0B8390022F59C /* ArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
 		88788BC627B0B8390022F59C /* ArtistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistCell.xib; sourceTree = "<group>"; };
 		88788BCA27B0BDB30022F59C /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
@@ -97,6 +99,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		881C572E27B351B800CAC6EF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				881C572F27B353A500CAC6EF /* APIManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		88788BC427B0B81A0022F59C /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +153,7 @@
 		8878DBB627B0B2A300676D03 /* spotifiy-app */ = {
 			isa = PBXGroup;
 			children = (
+				881C572E27B351B800CAC6EF /* Services */,
 				881C572B27B32FE500CAC6EF /* Helpers */,
 				8878DBCB27B0B4D000676D03 /* Use Cases */,
 				8878DBB727B0B2A300676D03 /* AppDelegate.swift */,
@@ -310,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				881C573027B353A500CAC6EF /* APIManager.swift in Sources */,
 				881C572727B32D5F00CAC6EF /* ArtistData.swift in Sources */,
 				881C572D27B32FF100CAC6EF /* Constants.swift in Sources */,
 				88788BCE27B0BE9C0022F59C /* MainViewModel.swift in Sources */,
